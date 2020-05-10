@@ -1,0 +1,1 @@
+INSERT INTO `SendItDB`.`UserLogIn` (`emailAddress`,`password`,`FirstName`,`LastName`,`WithAddress`) VALUES (?,?,?,?,?);

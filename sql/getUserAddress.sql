@@ -1,0 +1,1 @@
+SELECT * FROM `SendItDB`.`UserAddress` WHERE `emailAddress` = ?

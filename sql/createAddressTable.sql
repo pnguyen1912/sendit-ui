@@ -1,0 +1,1 @@
+CREATE TABLE `SendItDB`.`UserAddress`(`emailAddress` VARCHAR(50), `fullName` VARCHAR(50),`Address` VARCHAR(50),`City` VARCHAR(50),`State` VARCHAR(5), `ZipCode` VARCHAR(5), PRIMARY KEY(`emailAddress`))

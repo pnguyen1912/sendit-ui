@@ -1,0 +1,1 @@
+UPDATE `SendItDB`.`UserAddress` SET `fullName` = ?,`Address` = ?,`City`=?,`State`=?,`ZipCode`=? WHERE `emailAddress` = ?

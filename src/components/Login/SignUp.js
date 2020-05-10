@@ -74,7 +74,7 @@ const [errCode, setErrCode] = React.useState('');
       let data = {
         firstName, lastName, email, password1
       }
-      axios.post('http://localhost:8080/createuser', data)
+      axios.post('/createuser', data)
         .then(res => {
           console.log(res.data)
         if (res.data.affectedRows == 1){

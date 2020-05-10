@@ -57,13 +57,13 @@ export default function SignIn(props) {
     event.preventDefault();
     if(email !=='' && password !==''){
       let data={email,password}
-      axios.post('http://localhost:8080/getuserdata',data)
+      axios.post('/getuserdata',data)
       .then(res=> {
         if( res.data === 'No email found' || res.data ===  'Not Corrected'){
           setErr(res.data)
         } else {
           props.setUser(res.data)
-          axios.post('http://localhost:8080/getuseraddress',{email})
+          axios.post('/getuseraddress',{email})
           .then(res => {
             if (res.data !== 'No address found'){
               props.setUserAddress(res.data)

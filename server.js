@@ -4,13 +4,13 @@ const mysql = require('mysql');
 const fs = require('fs');
 const bodyParser = require('body-parser');
 const { Builder, By, Key, until } = require('selenium-webdriver');
+const { createProxyMiddleware } = require('http-proxy-middleware');
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use(cors())
-app.listen(3000)
-console.log(process.env.NODE_ENV)
+app.listen(8080)
 
 async function example() {
 

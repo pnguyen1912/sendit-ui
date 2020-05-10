@@ -78,7 +78,7 @@ e.preventDefault();
       ZipCode
     }
     if (Object.keys(props.userAddress).length ===0 ){
-    axios.post('http://localhost:8080/adduseraddress',data)
+    axios.post('/adduseraddress',data)
     .then(res => {
       if (res.data.affectedRows === 1){
       props.setUserAddress(data)
@@ -86,7 +86,7 @@ e.preventDefault();
     }})
     .catch(err => console.log(err))
   } else{
-    axios.post('http://localhost:8080/updateuseraddress',data)
+    axios.post('/updateuseraddress',data)
     .then(res => {
       if (res.data.affectedRows === 1){
       props.setUserAddress(data)

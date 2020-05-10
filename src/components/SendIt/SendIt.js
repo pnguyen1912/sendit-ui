@@ -82,10 +82,10 @@ const handlePayment =(e)=>{
 const searchEmail = (e)=>{
   e.preventDefault();
   if (search !== ""){
-  axios.post('http://localhost:8080/getuseraddress',{email: search})
+  axios.post('/getuseraddress',{email: search})
           .then(res => {
             if (res.data !== 'No address found'){
-              axios.post('http://localhost:8080/getuserinfo',{email:res.data.emailAddress})
+              axios.post('/getuserinfo',{email:res.data.emailAddress})
                 .then(resp => {
                   setReceiver(resp.data)
                   setFoundIt(true)
